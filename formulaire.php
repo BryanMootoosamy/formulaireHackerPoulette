@@ -1,6 +1,10 @@
 <section class="formulaire">
   <h1>Formulaire de contact</h1>
-  <img class="logo" src="content/hackers-poulette-logo.png" alt="Logo">
+  <section class="logoHead">
+    <a href="https://www.raspberrypi.org/"><img class="pie" src="content/pie.png" alt="Logo"></a>
+    <img class="logo" src="content/hackers-poulette-logo.png" alt="Logo">
+    <a href="http://www.becode.org/"><img class="becode" src="content/becode.png" alt="Logo"></a>
+  </section>
   <section class="form">
 
 
@@ -276,5 +280,23 @@
         </div>
       </form>
     </div>
+    <div class="droite">
+      <select class="form--msg-sujet" name="sujet">
+        <option value=NULL selected="selected">--Choisissez un sujet--</option>
+        <option disabled>__________________</option>
+        <option value="raspIssue">Problème avec votre compte</option>
+        <option value="sav">Service Après-Vente</option>
+        <option value="autre">Autre</option>
+      </select>
+      <textarea class="form--msg-area" name="msg-area" rows="8"></textarea>
+
+    </div>
   </section>
+  <div class="bouton">
+    <input class="form--msg-btn" type="submit" name="" value="Envoyer">
+  </div>
+  <footer class="copySocial">
+    <p class="copy">&#9400; BeCode.org, 2018, Charleroi</p>
+    <p class="social"><i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></p>
+  </footer>
 </section>
