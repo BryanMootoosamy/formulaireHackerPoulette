@@ -12,7 +12,13 @@
   margin: auto;
   justify-content: space-around;
 }
+.centre {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  margin: 5vh 2vw;
 
+}
 .formulaire {
 
   text-align: center;
@@ -52,12 +58,7 @@ input:valid {
 
 }
 
-.form {
-  display: flex;
-  margin: 5vh 2vw;
-  justify-content: space-around;
 
-}
 .info1 {
   display: flex;
   padding: auto;
@@ -106,6 +107,7 @@ input:valid {
 }
 .bouton {
   margin: 5vh auto;
+  padding: 2vh 0;
 }
 .copySocial{
   display: flex;

@@ -5,11 +5,9 @@
     <img class="logo" src="content/hackers-poulette-logo.png" alt="Logo">
     <a href="http://www.becode.org/"><img class="becode" src="content/becode.png" alt="Logo"></a>
   </section>
-  <section class="form">
-
-
-    <div class="gauche">
-      <form class="contact" action="formulaire.php" method="post">
+  <form class="contact" action="index.php" method="post">
+    <div class="centre">
+      <div class="gauche">
         <div class="info1">
           <label for="Nom">Nom: </label><input type="text" name="Nom" value="">
           <label for="Prénom">Prénom: </label><input type="text" name="Prénom" value=""><br/>
@@ -56,7 +54,6 @@
             <option value="Bulgarie">Bulgarie </option>
             <option value="Burkina_Faso">Burkina Faso </option>
             <option value="Burundi">Burundi </option>
-
             <option value="Caiman">Caiman </option>
             <option value="Cambodge">Cambodge </option>
             <option value="Cameroun">Cameroun </option>
@@ -278,23 +275,25 @@
           </select>
           <label for="mail">Email: </label><input type="text" name="mail" value="">
         </div>
-      </form>
+      </div>
+      <div class="droite">
+        <select class="form--msg-sujet" name="sujet">
+          <option value=NULL selected="selected">--Choisissez un sujet--</option>
+          <option disabled>__________________</option>
+          <option value="raspIssue">Problème avec votre compte</option>
+          <option value="sav">Service Après-Vente</option>
+          <option value="autre">Autre</option>
+        </select>
+        <textarea class="form--msg-area" name="msg-area" rows="8"></textarea>
+      </div>
     </div>
-    <div class="droite">
-      <select class="form--msg-sujet" name="sujet">
-        <option value=NULL selected="selected">--Choisissez un sujet--</option>
-        <option disabled>__________________</option>
-        <option value="raspIssue">Problème avec votre compte</option>
-        <option value="sav">Service Après-Vente</option>
-        <option value="autre">Autre</option>
-      </select>
-      <textarea class="form--msg-area" name="msg-area" rows="8"></textarea>
+    <div class="bouton">
+      <input class="form--msg-btn" type="submit" name="" value="Envoyer">
+    </div>
+  </form>
 
-    </div>
-  </section>
-  <div class="bouton">
-    <input class="form--msg-btn" type="submit" name="" value="Envoyer">
-  </div>
+
+
   <footer class="copySocial">
     <p class="copy">&#9400; BeCode.org, 2018, Charleroi</p>
     <p class="social"><i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></p>
