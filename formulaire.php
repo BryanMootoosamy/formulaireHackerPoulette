@@ -278,7 +278,7 @@
       </div>
       <div class="droite">
         <select class="form--msg-sujet" name="sujet">
-          <option value=NULL selected="selected">--Choisissez un sujet--</option>
+          <option selected="selected">--Choisissez un sujet--</option>
           <option disabled>__________________</option>
           <option value="raspIssue">Problème avec votre compte</option>
           <option value="sav">Service Après-Vente</option>

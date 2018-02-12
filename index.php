@@ -8,5 +8,6 @@
   </head>
   <body>
     <?php require "formulaire.php" ?>
+    <?php require "backend.php" ?>
   </body>
 </html>
