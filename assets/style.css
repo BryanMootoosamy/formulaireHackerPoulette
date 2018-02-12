@@ -36,7 +36,13 @@ body {
   background-color: #fff;
   border-radius: 300px;
 }
+input:invalid {
+ border: 1px solid red;
+}
 
+input:valid {
+  border: 1px solid green;
+}
 
 .gauche {
   width: 30vw;
