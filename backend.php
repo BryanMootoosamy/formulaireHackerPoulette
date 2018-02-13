@@ -1,14 +1,13 @@
 <?php
   if (isset($_POST['submit'])) {
-    function attribution ($input) {
+    function attribution ($input, $errorcheck = true) {
       if (isset($_POST[$input])) {
-        return $_POST[$input];
-      } else { echo "Erreur";};
-    };
-    function check ($test) {
-      if (!preg_match("/^[a-zA-Z ]*$/", $_POST[$test])) {
+        return $_POST[$input];}
+        elseif ($errorcheck == true) {echo "erreur";};};
+    function check ($test, $errorcheck = true) {
+      if (!preg_match("/^[a-zA-Z ]*$/", $_POST[$test]) || $errorcheck == true) {
         echo "Erreur";
-      } else {return attribution($test);};
+      } else {return attribution($test, $errorcheck);};
     };
     function checkMail ($testMail) {
       if (isset($_POST[$testMail]) && filter_var($_POST[$testMail], FILTER_VALIDATE_EMAIL)) {
@@ -22,9 +21,13 @@
     } else
       {return filter_input(INPUT_POST,$text, FILTER_SANITIZE_STRING);};
     };
-    $pays = attribution('pays');
-    $sujet = attribution('sujet');
-
+    $pays = check('pays', false);
+    $sujet = check('sujet', false);
+    $nom = check('Nom', false);
+    $prenom = check('Prénom', false);
+    $mail = checkMail('mail', false);
+    $msg = checkText('msg-area', false);
+    $genre = attribution('genre', false);
   };
 
 

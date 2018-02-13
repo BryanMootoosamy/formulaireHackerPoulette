@@ -1,4 +1,4 @@
-<?php require "backend.php" ?>
+
 <section class="formulaire">
   <h1>Formulaire de contact</h1>
   <section class="logoHead">
@@ -10,7 +10,7 @@
     <div class="centre">
       <div class="gauche">
         <div class="info1">
-          <label for="Nom">Nom: <?php if (isset($_POST['submit'])) {$nom = check('Nom');}; ?></label><input type="text" name="Nom" value="">
+          <label for="Nom">Nom: <?php if (isset($_POST['submit'])) {$nom = check('Nom');} ?></label><input type="text" name="Nom" value="">
           <label for="Prénom">Prénom: <?php if (isset($_POST['submit'])) {$prenom = check('Prénom');} ?></label><input type="text" name="Prénom" value=""><br/>
         </div>
         <div class="info2">
