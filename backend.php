@@ -24,8 +24,7 @@
     };
     $pays = attribution('pays');
     $sujet = attribution('sujet');
-    $mail = checkMail('mail');
-    mail($mail, "test", "test");
+
   };
 
 

@@ -7,7 +7,7 @@
     <title>Hackers Poulette - Formulaire de contact</title>
   </head>
   <body>
-    <?php require "backend.php" ?>
+
     <?php require "formulaire.php" ?>
 
   </body>

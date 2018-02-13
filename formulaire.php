@@ -1,3 +1,4 @@
+<?php require "backend.php" ?>
 <section class="formulaire">
   <h1>Formulaire de contact</h1>
   <section class="logoHead">
@@ -299,3 +300,8 @@
     <p class="social"><i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></p>
   </footer>
 </section>
+<?php
+  if (isset($pays) && isset($nom) && isset($prenom) && isset($msg) && isset($mail) && isset($sujet) ) {
+    mail($mail, "test", "test");
+  };
+ ?>
