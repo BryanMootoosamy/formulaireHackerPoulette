@@ -9,11 +9,11 @@
     <div class="centre">
       <div class="gauche">
         <div class="info1">
-          <label for="Nom">Nom: </label><input type="text" name="Nom" value="">
-          <label for="Prénom">Prénom: </label><input type="text" name="Prénom" value=""><br/>
+          <label for="Nom">Nom: <?php if (isset($_POST['submit'])) {$nom = check('Nom');}; ?></label><input type="text" name="Nom" value="">
+          <label for="Prénom">Prénom: <?php if (isset($_POST['submit'])) {$prenom = check('Prénom');} ?></label><input type="text" name="Prénom" value=""><br/>
         </div>
         <div class="info2">
-          <label for="genre">Genre: </label><input type="radio" name="genre" value="homme">Homme
+          <label for="genre">Genre: <?php if (isset($_POST['submit'])) {$genre = attribution('genre');} ?></label><input type="radio" name="genre" value="homme">Homme
           <input type="radio" name="genre" value="femme">Femme<br/>
         </div>
         <div class="paysMail">
@@ -273,22 +273,22 @@
             <option value="Zimbabwe">Zimbabwe </option>
 
           </select>
-          <label for="mail">Email: </label><input type="text" name="mail" value="">
+          <label for="mail">Email: <?php if (isset($_POST['submit'])) {$mail = checkMail('mail');} ?></label><input type="email" name="mail" value="">
         </div>
       </div>
       <div class="droite">
         <select class="form--msg-sujet" name="sujet">
-          <option selected="selected">--Choisissez un sujet--</option>
+          <option disabled selected="selected">--Choisissez un sujet--</option>
           <option disabled>__________________</option>
           <option value="raspIssue">Problème avec votre compte</option>
           <option value="sav">Service Après-Vente</option>
           <option value="autre">Autre</option>
         </select>
-        <textarea class="form--msg-area" name="msg-area" rows="8"></textarea>
+        <textarea class="form--msg-area" name="msg-area" rows="8" minlength=100><?php if (isset($_POST['submit'])) {$msg = checkText('msg-area');} ?></textarea>
       </div>
     </div>
     <div class="bouton">
-      <input class="form--msg-btn" type="submit" name="" value="Envoyer">
+      <input class="form--msg-btn" type="submit" name="submit" value="Envoyer">
     </div>
   </form>
 
