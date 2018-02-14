@@ -8,13 +8,12 @@
   </head>
   <body>
     <?php require "backend.php";
-     if (isset($nom) == false || isset($genre) == false || isset($prenom) == false || isset($mail) == false || isset($msg) == false) {
+     if (isset($nom) == false || isset($genre) == false || isset($prenom) == false || isset($mail) == false || $robot != "a") {
        require "formulaire.php"; }
-     elseif (isset($nom) && isset($prenom) && isset($mail) && isset($msg) && isset($genre)) {
+     elseif (isset($nom) && isset($prenom) && isset($mail) && isset($msg) && isset($genre) && $robot == "a") {
       mail($mail, "test", "test");
       require "resume.php";
     }
-
     ?>
   </body>
 </html>

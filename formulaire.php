@@ -15,6 +15,7 @@
         <div class="info2">
           <label for="genre">Genre: <?php if (isset($_POST['submit'])) {$genre = attribution('genre');} ?></label><input type="radio" name="genre" value="Homme">Homme
           <input type="radio" name="genre" value="Femme">Femme<br/>
+          <label for="robot">Quelle est la première lettre de l'alphabet ? <input type="text" name="robot"></label>
         </div>
         <div class="paysMail">
           Pays: <select name="pays">

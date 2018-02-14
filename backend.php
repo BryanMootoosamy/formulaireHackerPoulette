@@ -27,5 +27,6 @@
     $mail = checkMail('mail', false);
     $msg = checkText('msg-area', false);
     $genre = attribution('genre', false);
+    $robot = check('robot', false);
   };
 ?>
