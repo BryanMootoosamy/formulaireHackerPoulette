@@ -11,7 +11,9 @@
      if (isset($nom) == false || isset($genre) == false || isset($prenom) == false || isset($mail) == false || isset($msg) == false) {
        require "formulaire.php"; }
      elseif (isset($nom) && isset($prenom) && isset($mail) && isset($msg) && isset($genre)) {
-      echo $nom; }
+      mail($mail, "test", "test");
+      require "resume.php";
+    }
 
     ?>
   </body>

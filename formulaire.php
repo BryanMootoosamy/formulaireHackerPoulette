@@ -1,4 +1,3 @@
-
 <section class="formulaire">
   <h1>Formulaire de contact</h1>
   <section class="logoHead">
@@ -14,8 +13,8 @@
           <label for="Prénom">Prénom: <?php if (isset($_POST['submit'])) {$prenom = check('Prénom');} ?></label><input type="text" name="Prénom" value=""><br/>
         </div>
         <div class="info2">
-          <label for="genre">Genre: <?php if (isset($_POST['submit'])) {$genre = attribution('genre');} ?></label><input type="radio" name="genre" value="homme">Homme
-          <input type="radio" name="genre" value="femme">Femme<br/>
+          <label for="genre">Genre: <?php if (isset($_POST['submit'])) {$genre = attribution('genre');} ?></label><input type="radio" name="genre" value="Homme">Homme
+          <input type="radio" name="genre" value="Femme">Femme<br/>
         </div>
         <div class="paysMail">
           Pays: <select name="pays">
@@ -281,9 +280,9 @@
         <select class="form--msg-sujet" name="sujet">
           <option disabled selected="selected">--Choisissez un sujet--</option>
           <option disabled>__________________</option>
-          <option value="raspIssue">Problème avec votre compte</option>
-          <option value="sav">Service Après-Vente</option>
-          <option value="autre">Autre</option>
+          <option value="Problème avec votre compte">Problème avec votre compte</option>
+          <option value="Service Après-Vente">Service Après-Vente</option>
+          <option value="Autre">Autre</option>
         </select>
         <textarea class="form--msg-area" name="msg-area" rows="8" minlength=100><?php if (isset($_POST['submit'])) {$msg = checkText('msg-area');} ?></textarea>
       </div>
@@ -300,8 +299,3 @@
     <p class="social"><i class="fab fa-facebook"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></p>
   </footer>
 </section>
-<?php
-  if (isset($pays) && isset($nom) && isset($prenom) && isset($msg) && isset($mail) && isset($sujet) ) {
-    mail($mail, "test", "test");
-  };
- ?>
