@@ -11,7 +11,16 @@
      if (isset($nom) == false || isset($genre) == false || isset($prenom) == false || isset($mail) == false || $robot != "a") {
        require "formulaire.php"; }
      elseif (isset($nom) && isset($prenom) && isset($mail) && isset($msg) && isset($genre) && $robot == "a") {
-      mail($mail, "test", "test");
+      $textmsg = "Nous avons bien reçu votre formulaire de contact récapitulant les infos suivantes
+        $nom $prenom $genre
+
+        $mail
+
+        $sujet
+
+        $msg
+      ";
+      mail($mail, "test", $textmsg );
       require "resume.php";
     }
     ?>
